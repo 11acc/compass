@@ -1,5 +1,7 @@
 # compass
 
+live site at: https://11acc.github.io/compass/
+
 create and show various user's political compass leanings.
 
 future planned features:
