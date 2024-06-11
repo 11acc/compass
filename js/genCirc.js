@@ -10,15 +10,6 @@ let s123_x = s123_y
     = over_x = over_y
     = 0;
 
-let s123_nr = 4;
-let laya_nr = 2;
-let asap_nr = 2;
-let deep_nr = 2;
-let kumo_nr = 1;
-let simp_nr = 1;
-let qiii_nr = 1;
-let reoo_nr = 4;
-
 let x_long = 430/2;
 let y_long = 475/2;
 
@@ -28,11 +19,12 @@ let comp_keyword_y = $("#comp_keyword_y");
 let svgContainer = $("#SvgjsSvg1001");
 let clamp = $(".clamp");
 
-let c_18 = "#da70d6"
-let c_20 = "#c04000"
-let c_21 = "#ffffff"
-let c_22 = "#7df9ff"
-let c_23 = "#ffbd6a"
+let c_18 = getComputedStyle(document.documentElement).getPropertyValue('--c_18');
+let c_20 = getComputedStyle(document.documentElement).getPropertyValue('--c_20');
+let c_21 = getComputedStyle(document.documentElement).getPropertyValue('--c_21');
+let c_22 = getComputedStyle(document.documentElement).getPropertyValue('--c_22');
+let c_23 = getComputedStyle(document.documentElement).getPropertyValue('--c_23');
+let c_24 = getComputedStyle(document.documentElement).getPropertyValue('--c_24');
 
 let s123_img = "https://files.catbox.moe/6wex5e.png";
 let laya_img = "https://files.catbox.moe/p1x3bk.png";
@@ -75,7 +67,17 @@ reoo_vals = [
     , [21, -0.71, -1.52]
     , [22, -0.08, -6.11]
     , [23, -1.52, -5.55]
+    // , [11, 3.33, 6.11]
 ];
+
+let s123_nr = s123_vals.length;
+let laya_nr = laya_vals.length;
+let asap_nr = asap_vals.length;
+let deep_nr = deep_vals.length;
+let kumo_nr = kumo_vals.length;
+let simp_nr = simp_vals.length;
+let qiii_nr = qiii_vals.length;
+let reoo_nr = reoo_vals.length;
 
 s123_vals.forEach(function(val) {
     s123_x += val[1];
@@ -218,10 +220,10 @@ function prctgChangeTime(yr) {
 // CREATE CIRCLES -------------------------------------
 let circleData = [
     [//S123
-    { cx: realVal(true, s123_vals[0][1]), cy: realVal(false, s123_vals[0][2]), r: 12, class: "s123_circles", yr: 18, fill: "#ff0f43", stroke: c_18, sw: "3px", imageSrc: s123_img}
-    ,{ cx: realVal(true, s123_vals[1][1]), cy: realVal(false, s123_vals[1][2]), r: 12, class: "s123_circles", yr: 20, fill: "#ff0f43", stroke: c_20, sw: "3px", imageSrc: s123_img}
-    ,{ cx: realVal(true, s123_vals[2][1]), cy: realVal(false, s123_vals[2][2]), r: 12, class: "s123_circles", yr: 22, fill: "#ff0f43", stroke: c_22, sw: "3px", imageSrc: s123_img}
-    ,{ cx: realVal(true, s123_vals[3][1]), cy: realVal(false, s123_vals[3][2]), r: 12, class: "s123_circles", yr: 23, fill: "#ff0f43", stroke: c_23, sw: "3px", imageSrc: s123_img}
+        { cx: realVal(true, s123_vals[0][1]), cy: realVal(false, s123_vals[0][2]), r: 12, class: "s123_circles", yr: 18, fill: "#ff0f43", stroke: c_18, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[1][1]), cy: realVal(false, s123_vals[1][2]), r: 12, class: "s123_circles", yr: 20, fill: "#ff0f43", stroke: c_20, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[2][1]), cy: realVal(false, s123_vals[2][2]), r: 12, class: "s123_circles", yr: 22, fill: "#ff0f43", stroke: c_22, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[3][1]), cy: realVal(false, s123_vals[3][2]), r: 12, class: "s123_circles", yr: 23, fill: "#ff0f43", stroke: c_23, sw: "3px", imageSrc: s123_img}
     ]
     ,[//LAYA
         { cx: realVal(true, laya_vals[0][1]), cy: realVal(false, laya_vals[0][2]), r: 12, class: "laya_circles", yr: 20, fill: "#b71c1c", stroke: c_20, sw: "3px", imageSrc: laya_img}
@@ -249,6 +251,7 @@ let circleData = [
         ,{ cx: realVal(true, reoo_vals[1][1]), cy: realVal(false, reoo_vals[1][2]), r: 12, class: "reoo_circles", yr: 21, fill: "#e0e0e0", stroke: c_21, sw: "3px", imageSrc: reoo_img}
         ,{ cx: realVal(true, reoo_vals[2][1]), cy: realVal(false, reoo_vals[2][2]), r: 12, class: "reoo_circles", yr: 22, fill: "#e0e0e0", stroke: c_22, sw: "3px", imageSrc: reoo_img}
         ,{ cx: realVal(true, reoo_vals[3][1]), cy: realVal(false, reoo_vals[3][2]), r: 12, class: "reoo_circles", yr: 23, fill: "#e0e0e0", stroke: c_23, sw: "3px", imageSrc: reoo_img}
+        // ,{ cx: realVal(true, reoo_vals[4][1]), cy: realVal(false, reoo_vals[4][2]), r: 12, class: "reoo_circles", yr: 24, fill: "#e0e0e0", stroke: c_24, sw: "3px", imageSrc: reoo_img}
     ]
 ];
 
