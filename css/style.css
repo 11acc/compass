@@ -153,6 +153,9 @@
     color: var(--reoo_cls);
 }
 
+.user_btn_active.s123_btn {
+    color: var(--s123_cls);
+}
 .user_btn_active.laya_btn {
     color: var(--laya_cls);
 }
@@ -326,7 +329,7 @@
     font-weight: 700;
     font-size: 555px;
     z-index: -1;
-    opacity: 0.03;
+    opacity: 0.035;
 }
 
 @media only screen and (max-width: 670px) {
