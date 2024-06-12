@@ -17,7 +17,8 @@ let comp_keyword_x = $("#comp_keyword_x");
 let comp_keyword_y = $("#comp_keyword_y");
 
 let svgContainer = $("#SvgjsSvg1001");
-let clamp = $(".clamp");
+let clamp = $(".clamp.bot1");
+let sponge = $(".clamp.bot2");
 
 let c_18 = getComputedStyle(document.documentElement).getPropertyValue('--c_18');
 let c_20 = getComputedStyle(document.documentElement).getPropertyValue('--c_20');
@@ -387,6 +388,12 @@ avg_li.forEach(function(person) {
 
 // CREATE ANIMATION -------------------------------------
 function animateCirc(circleData) {
+    // IF time active - give alert
+    if (time_active) {
+        clampRevealTheSecondComing();
+        console.log("exit early, anim global is active");
+        return;
+    }
     // IF global is active - give alert
     if (!spec_active) {
         clampReveal();
@@ -465,7 +472,12 @@ function clampReveal() {
         clamp.css("bottom", "-11%");
     }, 2000);
 }
-
+function clampRevealTheSecondComing() { // i am the same person after all xD
+    sponge.css("bottom", "0");
+    setTimeout(function() {
+        sponge.css("bottom", "-11%");
+    }, 2000);
+}
 
 
 // animation trigger

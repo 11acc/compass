@@ -131,6 +131,12 @@
     margin: 27px;
     padding: 0 14px;
 }
+.bot1 {
+    bottom: -11%;
+}
+.bot2 {
+    bottom: -11%;
+}
 .tip {
     width: 240px;
     position: absolute;

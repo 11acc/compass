@@ -104,12 +104,14 @@ function basicClick(host) {
         if (!spec_active) {
             changeCompState(host);
             prctgChangePerson(host);
+            spec_active = true;
+            console.log("spec_active", spec_active, "(clicked same)");
         } else {
             changeCompState("all");
             prctgChangePerson("all");
+            spec_active = false;
+            console.log("spec_active", spec_active, "(clicked same)");
         }
-        spec_active = false;
-        console.log("spec_active", spec_active, "(clicked same)");
     // IF its the first click
     } else if (data_clicks == "first") {
         flipAll(host);
