@@ -36,6 +36,15 @@ let simp_img = "https://files.catbox.moe/2gud1u.png";
 let qiii_img = "https://files.catbox.moe/lwm5dj.png";
 let reoo_img = "https://files.catbox.moe/l7ce91.png"
 
+let s123_cls = getComputedStyle(document.documentElement).getPropertyValue('--s123_cls');
+let laya_cls = getComputedStyle(document.documentElement).getPropertyValue('--laya_cls');
+let asap_cls = getComputedStyle(document.documentElement).getPropertyValue('--asap_cls');
+let deep_cls = getComputedStyle(document.documentElement).getPropertyValue('--deep_cls');
+let kumo_cls = getComputedStyle(document.documentElement).getPropertyValue('--kumo_cls');
+let simp_cls = getComputedStyle(document.documentElement).getPropertyValue('--simp_cls');
+let qiii_cls = getComputedStyle(document.documentElement).getPropertyValue('--qiii_cls');
+let reoo_cls = getComputedStyle(document.documentElement).getPropertyValue('--reoo_cls');
+
 s123_vals = [
     [18, -3.83, -2.21]
     , [20, -2.71, -3.69]
@@ -228,45 +237,45 @@ function prctgChangeTime(yr) {
 // CREATE CIRCLES -------------------------------------
 let circleData = [
     [//S123
-        { cx: realVal(true, s123_vals[0][1]), cy: realVal(false, s123_vals[0][2]), r: 12, class: "s123_circles", yr: 18, fill: "#ff0f43", stroke: c_18, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[1][1]), cy: realVal(false, s123_vals[1][2]), r: 12, class: "s123_circles", yr: 20, fill: "#ff0f43", stroke: c_20, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[2][1]), cy: realVal(false, s123_vals[2][2]), r: 12, class: "s123_circles", yr: 22, fill: "#ff0f43", stroke: c_22, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[3][1]), cy: realVal(false, s123_vals[3][2]), r: 12, class: "s123_circles", yr: 23, fill: "#ff0f43", stroke: c_23, sw: "3px", imageSrc: s123_img}
-        // ,{ cx: realVal(true, s123_vals[4][1]), cy: realVal(false, s123_vals[4][2]), r: 12, class: "s123_circles", yr: 24, fill: "#ff0f43", stroke: c_23, sw: "3px", imageSrc: s123_img}
+        { cx: realVal(true, s123_vals[0][1]), cy: realVal(false, s123_vals[0][2]), r: 12, class: "s123_circles", yr: 18, fill: s123_cls, stroke: c_18, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[1][1]), cy: realVal(false, s123_vals[1][2]), r: 12, class: "s123_circles", yr: 20, fill: s123_cls, stroke: c_20, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[2][1]), cy: realVal(false, s123_vals[2][2]), r: 12, class: "s123_circles", yr: 22, fill: s123_cls, stroke: c_22, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[3][1]), cy: realVal(false, s123_vals[3][2]), r: 12, class: "s123_circles", yr: 23, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
+        // ,{ cx: realVal(true, s123_vals[4][1]), cy: realVal(false, s123_vals[4][2]), r: 12, class: "s123_circles", yr: 24, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
     ]
     ,[//LAYA
-        { cx: realVal(true, laya_vals[0][1]), cy: realVal(false, laya_vals[0][2]), r: 12, class: "laya_circles", yr: 20, fill: "#b71c1c", stroke: c_20, sw: "3px", imageSrc: laya_img}
-        ,{ cx: realVal(true, laya_vals[1][1]), cy: realVal(false, laya_vals[1][2]), r: 12, class: "laya_circles", yr: 23, fill: "#b71c1c", stroke: c_23, sw: "3px", imageSrc: laya_img}
-        // ,{ cx: realVal(true, laya_vals[2][1]), cy: realVal(false, laya_vals[2][2]), r: 12, class: "laya_circles", yr: 24, fill: "#b71c1c", stroke: c_24, sw: "3px", imageSrc: laya_img}
+        { cx: realVal(true, laya_vals[0][1]), cy: realVal(false, laya_vals[0][2]), r: 12, class: "laya_circles", yr: 20, fill: laya_cls, stroke: c_20, sw: "3px", imageSrc: laya_img}
+        ,{ cx: realVal(true, laya_vals[1][1]), cy: realVal(false, laya_vals[1][2]), r: 12, class: "laya_circles", yr: 23, fill: laya_cls, stroke: c_23, sw: "3px", imageSrc: laya_img}
+        // ,{ cx: realVal(true, laya_vals[2][1]), cy: realVal(false, laya_vals[2][2]), r: 12, class: "laya_circles", yr: 24, fill: laya_cls, stroke: c_24, sw: "3px", imageSrc: laya_img}
     ]
     ,[//ASAP
-        { cx: realVal(true, asap_vals[0][1]), cy: realVal(false, asap_vals[0][2]), r: 12, class: "asap_circles", yr: 20, fill: "#575757", stroke: c_20, sw: "3px", imageSrc: asap_img}
-        ,{ cx: realVal(true, asap_vals[1][1]), cy: realVal(false, asap_vals[1][2]), r: 12, class: "asap_circles", yr: 23, fill: "#575757", stroke: c_23, sw: "3px", imageSrc: asap_img}
-        // ,{ cx: realVal(true, asap_vals[2][1]), cy: realVal(false, asap_vals[2][2]), r: 12, class: "asap_circles", yr: 24, fill: "#575757", stroke: c_24, sw: "3px", imageSrc: asap_img}
+        { cx: realVal(true, asap_vals[0][1]), cy: realVal(false, asap_vals[0][2]), r: 12, class: "asap_circles", yr: 20, fill: asap_cls, stroke: c_20, sw: "3px", imageSrc: asap_img}
+        ,{ cx: realVal(true, asap_vals[1][1]), cy: realVal(false, asap_vals[1][2]), r: 12, class: "asap_circles", yr: 23, fill: asap_cls, stroke: c_23, sw: "3px", imageSrc: asap_img}
+        // ,{ cx: realVal(true, asap_vals[2][1]), cy: realVal(false, asap_vals[2][2]), r: 12, class: "asap_circles", yr: 24, fill: asap_cls, stroke: c_24, sw: "3px", imageSrc: asap_img}
     ]
     ,[//DEEP
-        { cx: realVal(true, deep_vals[0][1]), cy: realVal(false, deep_vals[0][2]), r: 12, class: "deep_circles", yr: 20, fill: "#2d554c", stroke: c_20, sw: "3px", imageSrc: deep_img}
-        ,{ cx: realVal(true, deep_vals[1][1]), cy: realVal(false, deep_vals[1][2]), r: 12, class: "deep_circles", yr: 23, fill: "#2d554c", stroke: c_23, sw: "3px", imageSrc: deep_img}
-        // ,{ cx: realVal(true, deep_vals[2][1]), cy: realVal(false, deep_vals[2][2]), r: 12, class: "deep_circles", yr: 24, fill: "#2d554c", stroke: c_24, sw: "3px", imageSrc: deep_img}
+        { cx: realVal(true, deep_vals[0][1]), cy: realVal(false, deep_vals[0][2]), r: 12, class: "deep_circles", yr: 20, fill: deep_cls, stroke: c_20, sw: "3px", imageSrc: deep_img}
+        ,{ cx: realVal(true, deep_vals[1][1]), cy: realVal(false, deep_vals[1][2]), r: 12, class: "deep_circles", yr: 23, fill: deep_cls, stroke: c_23, sw: "3px", imageSrc: deep_img}
+        // ,{ cx: realVal(true, deep_vals[2][1]), cy: realVal(false, deep_vals[2][2]), r: 12, class: "deep_circles", yr: 24, fill: deep_cls, stroke: c_24, sw: "3px", imageSrc: deep_img}
     ]
     ,[//KUMO
-        { cx: realVal(true, kumo_vals[0][1]), cy: realVal(false, kumo_vals[0][2]), r: 12, class: "kumo_circles", yr: 20, fill: "#fafafa", stroke: c_20, sw: "3px", imageSrc: kumo_img}
-        // { cx: realVal(true, kumo_vals[1][1]), cy: realVal(false, kumo_vals[1][2]), r: 12, class: "kumo_circles", yr: 24, fill: "#fafafa", stroke: c_24, sw: "3px", imageSrc: kumo_img}
+        { cx: realVal(true, kumo_vals[0][1]), cy: realVal(false, kumo_vals[0][2]), r: 12, class: "kumo_circles", yr: 20, fill: kumo_cls, stroke: c_20, sw: "3px", imageSrc: kumo_img}
+        // { cx: realVal(true, kumo_vals[1][1]), cy: realVal(false, kumo_vals[1][2]), r: 12, class: "kumo_circles", yr: 24, fill: kumo_cls, stroke: c_24, sw: "3px", imageSrc: kumo_img}
     ]
     ,[//SIMP
-        { cx: realVal(true, simp_vals[0][1]), cy: realVal(false, simp_vals[0][2]), r: 12, class: "simp_circles", yr: 20, fill: "#007aff", stroke: c_20, sw: "3px", imageSrc: simp_img}
-        // { cx: realVal(true, simp_vals[1][1]), cy: realVal(false, simp_vals[1][2]), r: 12, class: "simp_circles", yr: 24, fill: "#007aff", stroke: c_24, sw: "3px", imageSrc: simp_img}
+        { cx: realVal(true, simp_vals[0][1]), cy: realVal(false, simp_vals[0][2]), r: 12, class: "simp_circles", yr: 20, fill: simp_cls, stroke: c_20, sw: "3px", imageSrc: simp_img}
+        // { cx: realVal(true, simp_vals[1][1]), cy: realVal(false, simp_vals[1][2]), r: 12, class: "simp_circles", yr: 24, fill: simp_cls, stroke: c_24, sw: "3px", imageSrc: simp_img}
     ]
     ,[//QIII
-        { cx: realVal(true, qiii_vals[0][1]), cy: realVal(false, qiii_vals[0][2]), r: 12, class: "qiii_circles", yr: 20, fill: "#00569f", stroke: c_20, sw: "3px", imageSrc: qiii_img}
-        // { cx: realVal(true, qiii_vals[1][1]), cy: realVal(false, qiii_vals[1][2]), r: 12, class: "qiii_circles", yr: 24, fill: "#00569f", stroke: c_24, sw: "3px", imageSrc: qiii_img}
+        { cx: realVal(true, qiii_vals[0][1]), cy: realVal(false, qiii_vals[0][2]), r: 12, class: "qiii_circles", yr: 20, fill: qiii_cls, stroke: c_20, sw: "3px", imageSrc: qiii_img}
+        // { cx: realVal(true, qiii_vals[1][1]), cy: realVal(false, qiii_vals[1][2]), r: 12, class: "qiii_circles", yr: 24, fill: qiii_cls, stroke: c_24, sw: "3px", imageSrc: qiii_img}
     ]
     ,[//REOO
-        { cx: realVal(true, reoo_vals[0][1]), cy: realVal(false, reoo_vals[0][2]), r: 12, class: "reoo_circles", yr: 20, fill: "#e0e0e0", stroke: c_20, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[1][1]), cy: realVal(false, reoo_vals[1][2]), r: 12, class: "reoo_circles", yr: 21, fill: "#e0e0e0", stroke: c_21, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[2][1]), cy: realVal(false, reoo_vals[2][2]), r: 12, class: "reoo_circles", yr: 22, fill: "#e0e0e0", stroke: c_22, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[3][1]), cy: realVal(false, reoo_vals[3][2]), r: 12, class: "reoo_circles", yr: 23, fill: "#e0e0e0", stroke: c_23, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[4][1]), cy: realVal(false, reoo_vals[4][2]), r: 12, class: "reoo_circles", yr: 24, fill: "#e0e0e0", stroke: c_24, sw: "3px", imageSrc: reoo_img}
+        { cx: realVal(true, reoo_vals[0][1]), cy: realVal(false, reoo_vals[0][2]), r: 12, class: "reoo_circles", yr: 20, fill: reoo_cls, stroke: c_20, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[1][1]), cy: realVal(false, reoo_vals[1][2]), r: 12, class: "reoo_circles", yr: 21, fill: reoo_cls, stroke: c_21, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[2][1]), cy: realVal(false, reoo_vals[2][2]), r: 12, class: "reoo_circles", yr: 22, fill: reoo_cls, stroke: c_22, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[3][1]), cy: realVal(false, reoo_vals[3][2]), r: 12, class: "reoo_circles", yr: 23, fill: reoo_cls, stroke: c_23, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[4][1]), cy: realVal(false, reoo_vals[4][2]), r: 12, class: "reoo_circles", yr: 24, fill: reoo_cls, stroke: c_24, sw: "3px", imageSrc: reoo_img}
     ]
 ];
 

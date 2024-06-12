@@ -188,23 +188,32 @@ function changeCompState(host) {
     // console.log("changing comp_state to", host);
     if (host == "all") {
         comp_state.html("Global");
+        comp_state.css("text-decoration", "underline 2px solid var(--t_color)")
     } else {
         if (host == "s123") {
             comp_state.html("S123");
+            comp_state.css("text-decoration", "underline 2px solid var(--s123_cls)");
         } else if (host == "laya") {
             comp_state.html("Layam");
+            comp_state.css("text-decoration", "underline 2px solid var(--laya_cls)");
         } else if (host == "asap") {
             comp_state.html("A$AP");
+            comp_state.css("text-decoration", "underline 2px solid var(--asap_cls)");
         } else if (host == "deep") {
             comp_state.html("Deep");
+            comp_state.css("text-decoration", "underline 2px solid var(--deep_cls)");
         } else if (host == "kumo") {
             comp_state.html("Kumori");
+            comp_state.css("text-decoration", "underline 2px solid var(--kumo_cls)");
         } else if (host == "simp") {
             comp_state.html("Simple");
+            comp_state.css("text-decoration", "underline 2px solid var(--simp_cls)");
         } else if (host == "qiii") {
             comp_state.html("Aniqi");
+            comp_state.css("text-decoration", "underline 2px solid var(--qiii_cls)");
         } else if (host == "reoo") {
             comp_state.html("Reoken");
+            comp_state.css("text-decoration", "underline 2px solid var(--reoo_cls)");
         }
     }
 }
