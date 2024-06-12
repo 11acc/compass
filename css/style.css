@@ -54,6 +54,9 @@
     color: #ffbd6a;
 }
 
+.user_btn.tbtn_24::after {
+    background-color: var(--c_24);
+}
 .user_btn.tbtn_22::after {
     background-color: var(--c_22);
 }
@@ -67,6 +70,9 @@
     background-color: var(--c_18);
 }
 
+.user_btn.tbtn_24:hover {
+    color: var(--c_24);
+}
 .user_btn.tbtn_22:hover {
     color: var(--c_22);
 }
@@ -80,6 +86,9 @@
     color: var(--c_18);
 }
 
+.user_btn_active.tbtn_24 {
+    color: var(--c_24);
+}
 .user_btn_active.tbtn_22 {
     color: var(--c_22);
 }
@@ -91,6 +100,79 @@
 }
 .user_btn_active.tbtn_18 {
     color: var(--c_18);
+}
+
+
+.user_btn.s123_btn::after {
+    background-color: var(--s123_cls);
+}
+.user_btn.laya_btn::after {
+    background-color: var(--laya_cls);
+}
+.user_btn.asap_btn::after {
+    background-color: var(--asap_cls);
+}
+.user_btn.deep_btn::after {
+    background-color: var(--deep_cls);
+}
+.user_btn.kumo_btn::after {
+    background-color: var(--kumo_cls);
+}
+.user_btn.simp_btn::after {
+    background-color: var(--simp_cls);
+}
+.user_btn.qiii_btn::after {
+    background-color: var(--qiii_cls);
+}
+.user_btn.reoo_btn::after {
+    background-color: var(--reoo_cls);
+}
+
+.user_btn.s123_btn:hover {
+    color: var(--s123_cls);
+}
+.user_btn.laya_btn:hover {
+    color: var(--laya_cls);
+}
+.user_btn.asap_btn:hover {
+    color: var(--asap_cls);
+}
+.user_btn.deep_btn:hover {
+    color: var(--deep_cls);
+}
+.user_btn.kumo_btn:hover {
+    color: var(--kumo_cls);
+}
+.user_btn.simp_btn:hover {
+    color: var(--simp_cls);
+}
+.user_btn.qiii_btn:hover {
+    color: var(--qiii_cls);
+}
+.user_btn.reoo_btn:hover {
+    color: var(--reoo_cls);
+}
+
+.user_btn_active.laya_btn {
+    color: var(--laya_cls);
+}
+.user_btn_active.asap_btn {
+    color: var(--asap_cls);
+}
+.user_btn_active.deep_btn {
+    color: var(--deep_cls);
+}
+.user_btn_active.kumo_btn {
+    color: var(--kumo_cls);
+}
+.user_btn_active.simp_btn {
+    color: var(--simp_cls);
+}
+.user_btn_active.qiii_btn {
+    color: var(--qiii_cls);
+}
+.user_btn_active.reoo_btn {
+    color: var(--reoo_cls);
 }
 
 
@@ -121,6 +203,12 @@
     bottom: -11%;
     margin: 27px;
     padding: 0 14px;
+}
+.bot1 {
+    bottom: -11%;
+}
+.bot2 {
+    bottom: -11%;
 }
 .tip {
     width: 240px;
@@ -184,6 +272,9 @@
 }
 .controls .ctrl_s {
     width: var(--ctrl_w);
+}
+.controls .ctrl_s #comp_state {
+    text-decoration: underline 2px solid var(--t_color);
 }
 .controls .li_bois {
     display: flex;

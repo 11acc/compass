@@ -6,11 +6,13 @@ let t_20 = $(".t_20");
 let t_21 = $(".t_21");
 let t_22 = $(".t_22");
 let t_23 = $(".t_23");
+let t_24 = $(".t_24");
 let tbtn_18 = $(".tbtn_18");
 let tbtn_20 = $(".tbtn_20");
 let tbtn_21 = $(".tbtn_21");
 let tbtn_22 = $(".tbtn_22");
 let tbtn_23 = $(".tbtn_23");
+let tbtn_24 = $(".tbtn_24");
 let tbtn_al = $(".tbtn_al");
 
 let s123_btn = $('.s123_btn');
@@ -102,12 +104,14 @@ function basicClick(host) {
         if (!spec_active) {
             changeCompState(host);
             prctgChangePerson(host);
+            spec_active = true;
+            console.log("spec_active", spec_active, "(clicked same)");
         } else {
             changeCompState("all");
             prctgChangePerson("all");
+            spec_active = false;
+            console.log("spec_active", spec_active, "(clicked same)");
         }
-        spec_active = false;
-        console.log("spec_active", spec_active, "(clicked same)");
     // IF its the first click
     } else if (data_clicks == "first") {
         flipAll(host);
@@ -184,27 +188,36 @@ function changeCompState(host) {
     // console.log("changing comp_state to", host);
     if (host == "all") {
         comp_state.html("Global");
+        comp_state.css("text-decoration", "underline 2px solid var(--t_color)")
     } else {
         if (host == "s123") {
             comp_state.html("S123");
+            comp_state.css("text-decoration", "underline 2px solid var(--s123_cls)");
         } else if (host == "laya") {
             comp_state.html("Layam");
+            comp_state.css("text-decoration", "underline 2px solid var(--laya_cls)");
         } else if (host == "asap") {
             comp_state.html("A$AP");
+            comp_state.css("text-decoration", "underline 2px solid var(--asap_cls)");
         } else if (host == "deep") {
             comp_state.html("Deep");
+            comp_state.css("text-decoration", "underline 2px solid var(--deep_cls)");
         } else if (host == "kumo") {
             comp_state.html("Kumori");
+            comp_state.css("text-decoration", "underline 2px solid var(--kumo_cls)");
         } else if (host == "simp") {
             comp_state.html("Simple");
+            comp_state.css("text-decoration", "underline 2px solid var(--simp_cls)");
         } else if (host == "qiii") {
             comp_state.html("Aniqi");
+            comp_state.css("text-decoration", "underline 2px solid var(--qiii_cls)");
         } else if (host == "reoo") {
             comp_state.html("Reoken");
+            comp_state.css("text-decoration", "underline 2px solid var(--reoo_cls)");
         }
     }
 }
-function putActive(type, host, tthis) {
+function putActive(type, host, tthis) { // why the fuck did i name it 'tthis'
     if (type == "time") {
         // IF default
         if (active_clicks == "first") {
@@ -223,6 +236,8 @@ function putActive(type, host, tthis) {
                 tbtn_22.removeClass("user_btn_active");
             } else if (active_clicks == "23") {
                 tbtn_23.removeClass("user_btn_active");
+            } else if (active_clicks == "24") {
+                tbtn_24.removeClass("user_btn_active");
             } else if (active_clicks == "all") {
                 tbtn_al.removeClass("user_btn_active");
             }
@@ -275,6 +290,7 @@ function putActive(type, host, tthis) {
         tbtn_21.removeClass("user_btn_active");
         tbtn_22.removeClass("user_btn_active");
         tbtn_23.removeClass("user_btn_active");
+        tbtn_24.removeClass("user_btn_active");
         tbtn_al.removeClass("user_btn_active");
     }
 }
@@ -311,6 +327,12 @@ tbtn_23.click(function() {
     putActive("time", "23", $(this));
     changeBB("2023");
     time_time = "23";
+});
+tbtn_24.click(function() {
+    timeClick(24);
+    putActive("time", "24", $(this));
+    changeBB("2024");
+    time_time = "24";
 });
 tbtn_al.click(function() {
     timeClick("all");
@@ -389,6 +411,11 @@ function changeTime(time) {
         } else if (time == 23) {
             t_23.removeClass("hide_them");
         }
+        if (time != 24) {
+            t_24.addClass("hide_them");
+        } else if (time == 24) {
+            t_24.removeClass("hide_them");
+        }
     }
 }
 function getTimeActive(time_active_list) {
@@ -447,7 +474,7 @@ function compoundCauseImLazy(host_time, temp_t) {
     test_class = $(t_comp)
     return test_class
 }
-function changeBB(eel) {
+function changeBB(eel) { // not optimising any of this really made me come up with stupid shit huh
     callScrambleGlitch(eel);
 }
 
