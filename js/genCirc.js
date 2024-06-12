@@ -29,12 +29,15 @@ let c_24 = getComputedStyle(document.documentElement).getPropertyValue('--c_24')
 
 let s123_img = "https://files.catbox.moe/6wex5e.png";
 let laya_img = "https://files.catbox.moe/p1x3bk.png";
-let asap_img = "https://files.catbox.moe/uj0hv4.png";
-let deep_img = "https://files.catbox.moe/kkeszb.png";
+// let asap_img = "https://files.catbox.moe/uj0hv4.png";
+let asap_img = "https://files.catbox.moe/j1zhaq.png";
+// let deep_img = "https://files.catbox.moe/kkeszb.png";
+let deep_img = "https://files.catbox.moe/m8hxc6.png";
 let kumo_img = "https://files.catbox.moe/b8a8dz.png";
 let simp_img = "https://files.catbox.moe/2gud1u.png";
 let qiii_img = "https://files.catbox.moe/lwm5dj.png";
-let reoo_img = "https://files.catbox.moe/l7ce91.png"
+// let reoo_img = "https://files.catbox.moe/l7ce91.png";
+let reoo_img = "https://files.catbox.moe/ur22dg.jpg";
 
 let s123_cls = getComputedStyle(document.documentElement).getPropertyValue('--s123_cls');
 let laya_cls = getComputedStyle(document.documentElement).getPropertyValue('--laya_cls');
