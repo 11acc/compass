@@ -53,7 +53,7 @@ s123_vals = [
     , [20, -2.71, -3.69]
     , [22, -3.85, -5.11]
     , [23, 0.55, -3.35]
-    // , [24, -1.13, -5.49]
+    , [24, -2.5, -1.28]
 ];
 laya_vals = [
     [20, -2.08, -2.81]
@@ -230,8 +230,18 @@ function prctgChangeTime(yr) {
         prctgStat(true, realVal(true, over_x))
         prctgStat(false, realVal(false, over_y))
     } else {
+        // calculate x for all time active ppl
+        // get time active ppl
+        time_active_list = []
+        time_active_list = getTimeActive(time_active_list);
+
+        console.log("time active list", time_active_list)
+
+        // prctgStat(true, realVal(true, over_x))
+        // prctgStat(false, realVal(false, over_y))
+
         comp_keyword_x.html(("Pending year specific"))
-        comp_keyword_y.html(("Pending year specific")) 
+        comp_keyword_y.html(("Pending year specific"))
     }
 }
 
@@ -244,7 +254,7 @@ let circleData = [
         ,{ cx: realVal(true, s123_vals[1][1]), cy: realVal(false, s123_vals[1][2]), r: 12, class: "s123_circles", yr: 20, fill: s123_cls, stroke: c_20, sw: "3px", imageSrc: s123_img}
         ,{ cx: realVal(true, s123_vals[2][1]), cy: realVal(false, s123_vals[2][2]), r: 12, class: "s123_circles", yr: 22, fill: s123_cls, stroke: c_22, sw: "3px", imageSrc: s123_img}
         ,{ cx: realVal(true, s123_vals[3][1]), cy: realVal(false, s123_vals[3][2]), r: 12, class: "s123_circles", yr: 23, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
-        // ,{ cx: realVal(true, s123_vals[4][1]), cy: realVal(false, s123_vals[4][2]), r: 12, class: "s123_circles", yr: 24, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[4][1]), cy: realVal(false, s123_vals[4][2]), r: 12, class: "s123_circles", yr: 24, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
     ]
     ,[//LAYA
         { cx: realVal(true, laya_vals[0][1]), cy: realVal(false, laya_vals[0][2]), r: 12, class: "laya_circles", yr: 20, fill: laya_cls, stroke: c_20, sw: "3px", imageSrc: laya_img}

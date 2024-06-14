@@ -299,46 +299,47 @@ function putActive(type, host, tthis) { // why the fuck did i name it 'tthis'
 
 // CHANGE TIME ----------------
 tbtn_18.click(function() {
+    time_time = "18";
     timeClick(18);
     putActive("time", "18", $(this));
     changeBB("2018");
-    time_time = "18";
 });
 tbtn_20.click(function() {
+    time_time = "20";
     timeClick(20);
     putActive("time", "20", $(this));
     changeBB("2020");
-    time_time = "20";
 });
 tbtn_21.click(function() {
+    time_time = "21";
     timeClick(21);
     putActive("time", "21", $(this));
     changeBB("2021");
-    time_time = "21";
 });
 tbtn_22.click(function() {
+    time_time = "22";
     timeClick(22);
     putActive("time", "22", $(this));
     changeBB("2022");
-    time_time = "22";
 });
 tbtn_23.click(function() {
+    time_time = "23";
     timeClick(23);
     putActive("time", "23", $(this));
     changeBB("2023");
-    time_time = "23";
 });
 tbtn_24.click(function() {
+    time_time = "24";
     timeClick(24);
     putActive("time", "24", $(this));
     changeBB("2024");
-    time_time = "24";
+    console.log("hey hey 24 now: ", time_time)
 });
 tbtn_al.click(function() {
+    time_time = "0";
     timeClick("all");
     putActive("time", "all", $(this));
     changeBB("/all");
-    time_time = "0";
 });
 
 
