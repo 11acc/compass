@@ -1,14 +1,15 @@
+'use strict';
 
-let s123_x = s123_y
-    = laya_x = laya_y
-    = asap_x = asap_y
-    = deep_x = deep_y
-    = kumo_x = kumo_y
-    = simp_x = simp_y
-    = qiii_x = qiii_y
-    = reoo_x = reoo_y
-    = over_x = over_y
-    = 0;
+let s123_x, s123_y,
+    laya_x, laya_y,
+    asap_x, asap_y,
+    deep_x, deep_y,
+    kumo_x, kumo_y,
+    simp_x, simp_y,
+    qiii_x, qiii_y,
+    reoo_x, reoo_y,
+    over_x, over_y;
+s123_x = s123_y = laya_x = laya_y = asap_x = asap_y = deep_x = deep_y = kumo_x = kumo_y = simp_x = simp_y = qiii_x = qiii_y = reoo_x = reoo_y = over_x = over_y = 0;
 
 let x_long = 430/2;
 let y_long = 475/2;
@@ -38,6 +39,7 @@ let simp_img = "https://files.catbox.moe/2gud1u.png";
 let qiii_img = "https://files.catbox.moe/lwm5dj.png";
 // let reoo_img = "https://files.catbox.moe/l7ce91.png";
 let reoo_img = "https://files.catbox.moe/ur22dg.jpg";
+let alll_img = "https://files.catbox.moe/5b7es1.png";
 
 let s123_cls = getComputedStyle(document.documentElement).getPropertyValue('--s123_cls');
 let laya_cls = getComputedStyle(document.documentElement).getPropertyValue('--laya_cls');
@@ -48,110 +50,104 @@ let simp_cls = getComputedStyle(document.documentElement).getPropertyValue('--si
 let qiii_cls = getComputedStyle(document.documentElement).getPropertyValue('--qiii_cls');
 let reoo_cls = getComputedStyle(document.documentElement).getPropertyValue('--reoo_cls');
 
-s123_vals = [
-    [18, -3.83, -2.21]
-    , [20, -2.71, -3.69]
-    , [22, -3.85, -5.11]
-    , [23, 0.55, -3.35]
-    , [24, -2.5, -1.28]
-];
-laya_vals = [
-    [20, -2.08, -2.81]
-    , [23, -4.63, -3.18]
-    // , [24, -1.13, -5.49]
-];
-asap_vals = [
-    [20, -3.21, 1.03]
-    , [23, 1.73, -0.67]
-    // , [24, -1.13, -5.49]
-];
-deep_vals = [
-    [20, -1.66, -1.16]
-    , [23, -2.38, 0.56]
-    // , [24, -1.13, -5.49]
-];
-kumo_vals = [
-    [20, 2.22, 3.65]
-    // , [24, -1.13, -5.49]
-];
-simp_vals = [
-    [20, 4.12, 4.76]
-    // , [24, -1.13, -5.49]
-];
-qiii_vals = [
-    [20, -1.68, -3.03]
-    // , [24, -1.13, -5.49]
-];
-reoo_vals = [
-    [20, -0.91, -4.21]
-    , [21, -0.71, -1.52]
-    , [22, -0.08, -6.11]
-    , [23, -1.52, -5.55]
-    , [24, -1.13, -5.49]
-];
+let s123_vals = {
+    18: [-3.83, -2.21]
+    , 20: [-2.71, -3.69]
+    , 22: [-3.85, -5.11]
+    , 23: [0.55, -3.35]
+    , 24: [-2.5, -1.28]
+};
+let laya_vals = {
+    20: [-2.08, -2.81]
+    , 23: [-4.63, -3.18]
+};
+let asap_vals = {
+    20: [-3.21, 1.03]
+    , 23: [1.73, -0.67]
+};
+let deep_vals = {
+    20: [-1.66, -1.16]
+    , 23: [-2.38, 0.56]
+};
+let kumo_vals = {
+    20: [2.22, 3.65]
+};
+let simp_vals = {
+    20: [4.12, 4.76]
+};
+let qiii_vals = {
+    20: [-1.68, -3.03]
+};
+let reoo_vals = {
+    20: [-0.91, -4.21]
+    , 21: [-0.71, -1.52]
+    , 22: [-0.08, -6.11]
+    , 23: [-1.52, -5.55]
+    , 24: [-1.13, -5.49]
+};
 
-let s123_nr = s123_vals.length;
-let laya_nr = laya_vals.length;
-let asap_nr = asap_vals.length;
-let deep_nr = deep_vals.length;
-let kumo_nr = kumo_vals.length;
-let simp_nr = simp_vals.length;
-let qiii_nr = qiii_vals.length;
-let reoo_nr = reoo_vals.length;
+let s123_nr = Object.keys(s123_vals).length;
+let laya_nr = Object.keys(laya_vals).length;
+let asap_nr = Object.keys(asap_vals).length;
+let deep_nr = Object.keys(deep_vals).length;
+let kumo_nr = Object.keys(kumo_vals).length;
+let simp_nr = Object.keys(simp_vals).length;
+let qiii_nr = Object.keys(qiii_vals).length;
+let reoo_nr = Object.keys(reoo_vals).length;
 
-s123_vals.forEach(function(val) {
-    s123_x += val[1];
-    s123_y += val[2];
-});
+for (const [_, val] of Object.entries(s123_vals)) {
+    s123_x += val[0];
+    s123_y += val[1];
+}
 s123_x /= s123_nr;
 s123_y /= s123_nr;
 
-laya_vals.forEach(function(val) {
-    laya_x += val[1];
-    laya_y += val[2];
-});
+for (const [_, val] of Object.entries(laya_vals)) {
+    laya_x += val[0];
+    laya_y += val[1];
+}
 laya_x /= laya_nr;
 laya_y /= laya_nr;
 
-asap_vals.forEach(function(val) {
-    asap_x += val[1];
-    asap_y += val[2];
-});
+for (const [_, val] of Object.entries(asap_vals)) {
+    asap_x += val[0];
+    asap_y += val[1];
+}
 asap_x /= asap_nr;
 asap_y /= asap_nr;
 
-deep_vals.forEach(function(val) {
-    deep_x += val[1];
-    deep_y += val[2];
-});
+for (const [_, val] of Object.entries(deep_vals)) {
+    deep_x += val[0];
+    deep_y += val[1];
+}
 deep_x /= deep_nr;
 deep_y /= deep_nr;
 
-kumo_vals.forEach(function(val) {
-    kumo_x += val[1];
-    kumo_y += val[2];
-});
+for (const [_, val] of Object.entries(kumo_vals)) {
+    kumo_x += val[0];
+    kumo_y += val[1];
+}
 kumo_x /= kumo_nr;
 kumo_y /= kumo_nr;
 
-simp_vals.forEach(function(val) {
-    simp_x += val[1];
-    simp_y += val[2];
-});
+for (const [_, val] of Object.entries(simp_vals)) {
+    simp_x += val[0];
+    simp_y += val[1];
+}
 simp_x /= simp_nr;
 simp_y /= simp_nr;
 
-qiii_vals.forEach(function(val) {
-    qiii_x += val[1];
-    qiii_y += val[2];
-});
+for (const [_, val] of Object.entries(qiii_vals)) {
+    qiii_x += val[0];
+    qiii_y += val[1];
+}
 qiii_x /= qiii_nr;
 qiii_y /= qiii_nr;
 
-reoo_vals.forEach(function(val) {
-    reoo_x += val[1];
-    reoo_y += val[2];
-});
+for (const [_, val] of Object.entries(reoo_vals)) {
+    reoo_x += val[0];
+    reoo_y += val[1];
+}
 reoo_x /= reoo_nr;
 reoo_y /= reoo_nr;
 
@@ -164,6 +160,8 @@ function realVal(orientation, sqr) {
         return sqr*21+214
     } else {
         // cy, auth lib, vertical
+        console.log("sqr: ", sqr)
+        console.log("val: ", (-1*sqr)*23+236)
         return (-1*sqr)*23+236
     }
 }
@@ -197,51 +195,78 @@ function prctgStat(orientation, axy) {
 }
 function prctgChangePerson(host) {
     if (host == "all") {
-        prctgStat(true, realVal(true, over_x))
-        prctgStat(false, realVal(false, over_y))
+        prctgStat(true, realVal(true, over_x));
+        prctgStat(false, realVal(false, over_y));
     } else if (host == "s123") {
-        prctgStat(true, realVal(true, s123_x))
-        prctgStat(false, realVal(false, s123_y))
+        prctgStat(true, realVal(true, s123_x));
+        prctgStat(false, realVal(false, s123_y));
     } else if (host == "laya") {
-        prctgStat(true, realVal(true, laya_x))
-        prctgStat(false, realVal(false, laya_y))
+        prctgStat(true, realVal(true, laya_x));
+        prctgStat(false, realVal(false, laya_y));
     } else if (host == "asap") {
-        prctgStat(true, realVal(true, asap_x))
-        prctgStat(false, realVal(false, asap_y))
+        prctgStat(true, realVal(true, asap_x));
+        prctgStat(false, realVal(false, asap_y));
     } else if (host == "deep") {
-        prctgStat(true, realVal(true, deep_x))
-        prctgStat(false, realVal(false, deep_y))
+        prctgStat(true, realVal(true, deep_x));
+        prctgStat(false, realVal(false, deep_y));
     } else if (host == "kumo") {
-        prctgStat(true, realVal(true, kumo_x))
-        prctgStat(false, realVal(false, kumo_y))
+        prctgStat(true, realVal(true, kumo_x));
+        prctgStat(false, realVal(false, kumo_y));
     } else if (host == "simp") {
-        prctgStat(true, realVal(true, simp_x))
-        prctgStat(false, realVal(false, simp_y))
+        prctgStat(true, realVal(true, simp_x));
+        prctgStat(false, realVal(false, simp_y));
     } else if (host == "qiii") {
-        prctgStat(true, realVal(true, qiii_x))
-        prctgStat(false, realVal(false, qiii_y))
+        prctgStat(true, realVal(true, qiii_x));
+        prctgStat(false, realVal(false, qiii_y));
     } else if (host == "reoo") {
-        prctgStat(true, realVal(true, reoo_x))
-        prctgStat(false, realVal(false, reoo_y))
+        prctgStat(true, realVal(true, reoo_x));
+        prctgStat(false, realVal(false, reoo_y));
+    }
+}
+function getActualTComp(t_comp) {
+    if (t_comp == "s123_vals") {
+        return s123_vals;
+    } else if (t_comp == "laya_vals") {
+        return laya_vals;
+    } else if (t_comp == "asap_vals") {
+        return asap_vals;
+    } else if (t_comp == "deep_vals") {
+        return deep_vals;
+    } else if (t_comp == "kumo_vals") {
+        return kumo_vals;
+    } else if (t_comp == "simp_vals") {
+        return simp_vals;
+    } else if (t_comp == "qiii_vals") {
+        return qiii_vals;
+    } else if (t_comp == "reoo_vals") {
+        return reoo_vals;
     }
 }
 function prctgChangeTime(yr) {
+    let time_x, time_y, host, host_vals, t_comp;
+    let time_active_list = [];
+    time_x = time_y = 0;
+    host_vals = {};
+
     if (yr == "all") {
-        prctgStat(true, realVal(true, over_x))
-        prctgStat(false, realVal(false, over_y))
+        prctgStat(true, realVal(true, over_x));
+        prctgStat(false, realVal(false, over_y));
     } else {
-        // calculate x for all time active ppl
-        // get time active ppl
-        time_active_list = []
         time_active_list = getTimeActive(time_active_list);
 
-        console.log("time active list", time_active_list)
-
-        // prctgStat(true, realVal(true, over_x))
-        // prctgStat(false, realVal(false, over_y))
-
-        comp_keyword_x.html(("Pending year specific"))
-        comp_keyword_y.html(("Pending year specific"))
+        for (let i = 0; i < time_active_list.length; i++) {
+            host = time_active_list[i];
+            t_comp = host + "_vals";
+            console.log("t_comp: ", t_comp);
+            host_vals = getActualTComp(t_comp);
+            time_x += host_vals[yr][0];
+            time_y += host_vals[yr][1];
+            console.log("time vals: ", time_x, time_y);
+        }
+        time_x /= time_active_list.length;
+        time_y /= time_active_list.length;
+        prctgStat(true, realVal(true, time_x));
+        prctgStat(false, realVal(false, time_y));
     }
 }
 
@@ -250,45 +275,39 @@ function prctgChangeTime(yr) {
 // CREATE CIRCLES -------------------------------------
 let circleData = [
     [//S123
-        { cx: realVal(true, s123_vals[0][1]), cy: realVal(false, s123_vals[0][2]), r: 12, class: "s123_circles", yr: 18, fill: s123_cls, stroke: c_18, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[1][1]), cy: realVal(false, s123_vals[1][2]), r: 12, class: "s123_circles", yr: 20, fill: s123_cls, stroke: c_20, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[2][1]), cy: realVal(false, s123_vals[2][2]), r: 12, class: "s123_circles", yr: 22, fill: s123_cls, stroke: c_22, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[3][1]), cy: realVal(false, s123_vals[3][2]), r: 12, class: "s123_circles", yr: 23, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
-        ,{ cx: realVal(true, s123_vals[4][1]), cy: realVal(false, s123_vals[4][2]), r: 12, class: "s123_circles", yr: 24, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
+        { cx: realVal(true, s123_vals[18][0]), cy: realVal(false, s123_vals[18][1]), r: 12, class: "s123_circles", yr: 18, fill: s123_cls, stroke: c_18, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[20][0]), cy: realVal(false, s123_vals[20][1]), r: 12, class: "s123_circles", yr: 20, fill: s123_cls, stroke: c_20, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[22][0]), cy: realVal(false, s123_vals[22][1]), r: 12, class: "s123_circles", yr: 22, fill: s123_cls, stroke: c_22, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[23][0]), cy: realVal(false, s123_vals[23][1]), r: 12, class: "s123_circles", yr: 23, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
+        ,{ cx: realVal(true, s123_vals[24][0]), cy: realVal(false, s123_vals[24][1]), r: 12, class: "s123_circles", yr: 24, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
     ]
     ,[//LAYA
-        { cx: realVal(true, laya_vals[0][1]), cy: realVal(false, laya_vals[0][2]), r: 12, class: "laya_circles", yr: 20, fill: laya_cls, stroke: c_20, sw: "3px", imageSrc: laya_img}
-        ,{ cx: realVal(true, laya_vals[1][1]), cy: realVal(false, laya_vals[1][2]), r: 12, class: "laya_circles", yr: 23, fill: laya_cls, stroke: c_23, sw: "3px", imageSrc: laya_img}
-        // ,{ cx: realVal(true, laya_vals[2][1]), cy: realVal(false, laya_vals[2][2]), r: 12, class: "laya_circles", yr: 24, fill: laya_cls, stroke: c_24, sw: "3px", imageSrc: laya_img}
+        { cx: realVal(true, laya_vals[20][0]), cy: realVal(false, laya_vals[20][1]), r: 12, class: "laya_circles", yr: 20, fill: laya_cls, stroke: c_20, sw: "3px", imageSrc: laya_img}
+        ,{ cx: realVal(true, laya_vals[23][0]), cy: realVal(false, laya_vals[23][1]), r: 12, class: "laya_circles", yr: 23, fill: laya_cls, stroke: c_23, sw: "3px", imageSrc: laya_img}
     ]
     ,[//ASAP
-        { cx: realVal(true, asap_vals[0][1]), cy: realVal(false, asap_vals[0][2]), r: 12, class: "asap_circles", yr: 20, fill: asap_cls, stroke: c_20, sw: "3px", imageSrc: asap_img}
-        ,{ cx: realVal(true, asap_vals[1][1]), cy: realVal(false, asap_vals[1][2]), r: 12, class: "asap_circles", yr: 23, fill: asap_cls, stroke: c_23, sw: "3px", imageSrc: asap_img}
-        // ,{ cx: realVal(true, asap_vals[2][1]), cy: realVal(false, asap_vals[2][2]), r: 12, class: "asap_circles", yr: 24, fill: asap_cls, stroke: c_24, sw: "3px", imageSrc: asap_img}
+        { cx: realVal(true, asap_vals[20][0]), cy: realVal(false, asap_vals[20][1]), r: 12, class: "asap_circles", yr: 20, fill: asap_cls, stroke: c_20, sw: "3px", imageSrc: asap_img}
+        ,{ cx: realVal(true, asap_vals[23][0]), cy: realVal(false, asap_vals[23][1]), r: 12, class: "asap_circles", yr: 23, fill: asap_cls, stroke: c_23, sw: "3px", imageSrc: asap_img}
     ]
     ,[//DEEP
-        { cx: realVal(true, deep_vals[0][1]), cy: realVal(false, deep_vals[0][2]), r: 12, class: "deep_circles", yr: 20, fill: deep_cls, stroke: c_20, sw: "3px", imageSrc: deep_img}
-        ,{ cx: realVal(true, deep_vals[1][1]), cy: realVal(false, deep_vals[1][2]), r: 12, class: "deep_circles", yr: 23, fill: deep_cls, stroke: c_23, sw: "3px", imageSrc: deep_img}
-        // ,{ cx: realVal(true, deep_vals[2][1]), cy: realVal(false, deep_vals[2][2]), r: 12, class: "deep_circles", yr: 24, fill: deep_cls, stroke: c_24, sw: "3px", imageSrc: deep_img}
+        { cx: realVal(true, deep_vals[20][0]), cy: realVal(false, deep_vals[20][1]), r: 12, class: "deep_circles", yr: 20, fill: deep_cls, stroke: c_20, sw: "3px", imageSrc: deep_img}
+        ,{ cx: realVal(true, deep_vals[23][0]), cy: realVal(false, deep_vals[23][1]), r: 12, class: "deep_circles", yr: 23, fill: deep_cls, stroke: c_23, sw: "3px", imageSrc: deep_img}
     ]
     ,[//KUMO
-        { cx: realVal(true, kumo_vals[0][1]), cy: realVal(false, kumo_vals[0][2]), r: 12, class: "kumo_circles", yr: 20, fill: kumo_cls, stroke: c_20, sw: "3px", imageSrc: kumo_img}
-        // { cx: realVal(true, kumo_vals[1][1]), cy: realVal(false, kumo_vals[1][2]), r: 12, class: "kumo_circles", yr: 24, fill: kumo_cls, stroke: c_24, sw: "3px", imageSrc: kumo_img}
+        { cx: realVal(true, kumo_vals[20][0]), cy: realVal(false, kumo_vals[20][1]), r: 12, class: "kumo_circles", yr: 20, fill: kumo_cls, stroke: c_20, sw: "3px", imageSrc: kumo_img}
     ]
     ,[//SIMP
-        { cx: realVal(true, simp_vals[0][1]), cy: realVal(false, simp_vals[0][2]), r: 12, class: "simp_circles", yr: 20, fill: simp_cls, stroke: c_20, sw: "3px", imageSrc: simp_img}
-        // { cx: realVal(true, simp_vals[1][1]), cy: realVal(false, simp_vals[1][2]), r: 12, class: "simp_circles", yr: 24, fill: simp_cls, stroke: c_24, sw: "3px", imageSrc: simp_img}
+        { cx: realVal(true, simp_vals[20][0]), cy: realVal(false, simp_vals[20][1]), r: 12, class: "simp_circles", yr: 20, fill: simp_cls, stroke: c_20, sw: "3px", imageSrc: simp_img}
     ]
     ,[//QIII
-        { cx: realVal(true, qiii_vals[0][1]), cy: realVal(false, qiii_vals[0][2]), r: 12, class: "qiii_circles", yr: 20, fill: qiii_cls, stroke: c_20, sw: "3px", imageSrc: qiii_img}
-        // { cx: realVal(true, qiii_vals[1][1]), cy: realVal(false, qiii_vals[1][2]), r: 12, class: "qiii_circles", yr: 24, fill: qiii_cls, stroke: c_24, sw: "3px", imageSrc: qiii_img}
+        { cx: realVal(true, qiii_vals[20][0]), cy: realVal(false, qiii_vals[20][1]), r: 12, class: "qiii_circles", yr: 20, fill: qiii_cls, stroke: c_20, sw: "3px", imageSrc: qiii_img}
     ]
     ,[//REOO
-        { cx: realVal(true, reoo_vals[0][1]), cy: realVal(false, reoo_vals[0][2]), r: 12, class: "reoo_circles", yr: 20, fill: reoo_cls, stroke: c_20, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[1][1]), cy: realVal(false, reoo_vals[1][2]), r: 12, class: "reoo_circles", yr: 21, fill: reoo_cls, stroke: c_21, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[2][1]), cy: realVal(false, reoo_vals[2][2]), r: 12, class: "reoo_circles", yr: 22, fill: reoo_cls, stroke: c_22, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[3][1]), cy: realVal(false, reoo_vals[3][2]), r: 12, class: "reoo_circles", yr: 23, fill: reoo_cls, stroke: c_23, sw: "3px", imageSrc: reoo_img}
-        ,{ cx: realVal(true, reoo_vals[4][1]), cy: realVal(false, reoo_vals[4][2]), r: 12, class: "reoo_circles", yr: 24, fill: reoo_cls, stroke: c_24, sw: "3px", imageSrc: reoo_img}
+        { cx: realVal(true, reoo_vals[20][0]), cy: realVal(false, reoo_vals[20][1]), r: 12, class: "reoo_circles", yr: 20, fill: reoo_cls, stroke: c_20, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[21][0]), cy: realVal(false, reoo_vals[21][1]), r: 12, class: "reoo_circles", yr: 21, fill: reoo_cls, stroke: c_21, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[22][0]), cy: realVal(false, reoo_vals[22][1]), r: 12, class: "reoo_circles", yr: 22, fill: reoo_cls, stroke: c_22, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[23][0]), cy: realVal(false, reoo_vals[23][1]), r: 12, class: "reoo_circles", yr: 23, fill: reoo_cls, stroke: c_23, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[24][0]), cy: realVal(false, reoo_vals[24][1]), r: 12, class: "reoo_circles", yr: 24, fill: reoo_cls, stroke: c_24, sw: "3px", imageSrc: reoo_img}
     ]
 ];
 
@@ -363,7 +382,7 @@ let avg_li = [
     ,["simp",realVal(true, simp_x),realVal(false, simp_y), "c_avg", "hidden_def", simp_img]
     ,["qiii",realVal(true, qiii_x),realVal(false, qiii_y), "c_avg", "hidden_def", qiii_img]
     ,["reoo",realVal(true, reoo_x),realVal(false, reoo_y), "c_avg", "hidden_def", reoo_img]
-    ,["alll",realVal(true, over_x),realVal(false, over_y), "c_avg", "hidden_def", "https://files.catbox.moe/5b7es1.png"]
+    ,["alll",realVal(true, over_x),realVal(false, over_y), "c_avg", "hidden_def", alll_img]
 ];
 
 avg_li.forEach(function(person) {
@@ -484,8 +503,8 @@ function getPplIdx() {
         giveBack = 7;
     }
 
-    console.log(data_clicks, "turning into", giveBack)
-    return giveBack
+    console.log(data_clicks, "turning into", giveBack);
+    return giveBack;
 }
 
 function clampReveal() {
@@ -509,5 +528,5 @@ $(".pog_btn").click(function() {
 
 
 // set def
-prctgStat(true, realVal(true, over_x))
-prctgStat(false, realVal(false, over_y))
+prctgStat(true, realVal(true, over_x));
+prctgStat(false, realVal(false, over_y));

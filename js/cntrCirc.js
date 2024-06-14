@@ -92,9 +92,9 @@ function basicClick(host) {
     if (time_active) {
         time_active_list = []
         time_active_list = getTimeActive(time_active_list);
-        if ($.inArray(host, time_active_list) !== -1) {
+        if (!(time_active_list.includes(host))) {
             // Exit early
-            console.log("exit early,", host, "in time_active_list ", time_active_list)
+            console.log("exit early,", host, "not in time_active_list ", time_active_list)
             return;
         }
     }
@@ -427,43 +427,43 @@ function getTimeActive(time_active_list) {
 
     //s123
     test_class = compoundCauseImLazy("s123_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         // console.log("dear lord please")
         time_active_list.push("s123");
     }
     // laya
     test_class = compoundCauseImLazy("laya_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("laya");
     }
     // asap
     test_class = compoundCauseImLazy("asap_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("asap");
     }
     // deep
     test_class = compoundCauseImLazy("deep_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("deep");
     }
     // kumo
     test_class = compoundCauseImLazy("kumo_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("kumo");
     }
     // simp
     test_class = compoundCauseImLazy("simp_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("simp");
     }
     // qiii
     test_class = compoundCauseImLazy("qiii_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("qiii");
     }
     // reoo
     test_class = compoundCauseImLazy("reoo_circles", temp_t)
-    if (!(test_class.length > 0)) {
+    if (test_class.length > 0) {
         time_active_list.push("reoo");
     }
 
