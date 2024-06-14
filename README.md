@@ -2,10 +2,10 @@
 
 live site at: https://11acc.github.io/compass/
 
-show a set of wacky user's political compass leanings
+shows a set of wacky user's political compass leanings
 
-~future planned~ never coming LOL features:
-- year specific stats
+future planned (?) features:
+- ~year specific stats~
 - probability of people switching quadrants
 - user capability to upload results
 - user capability to change img
