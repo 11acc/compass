@@ -68,6 +68,7 @@ let asap_vals = {
 let deep_vals = {
     20: [-1.66, -1.16]
     , 23: [-2.38, 0.56]
+    , 24: [-2.00, 0.62]
 };
 let kumo_vals = {
     20: [2.22, 3.65]
@@ -292,6 +293,7 @@ let circleData = [
     ,[//DEEP
         { cx: realVal(true, deep_vals[20][0]), cy: realVal(false, deep_vals[20][1]), r: 12, class: "deep_circles", yr: 20, fill: deep_cls, stroke: c_20, sw: "3px", imageSrc: deep_img}
         ,{ cx: realVal(true, deep_vals[23][0]), cy: realVal(false, deep_vals[23][1]), r: 12, class: "deep_circles", yr: 23, fill: deep_cls, stroke: c_23, sw: "3px", imageSrc: deep_img}
+        ,{ cx: realVal(true, deep_vals[24][0]), cy: realVal(false, deep_vals[24][1]), r: 12, class: "deep_circles", yr: 24, fill: deep_cls, stroke: c_24, sw: "3px", imageSrc: deep_img}
     ]
     ,[//KUMO
         { cx: realVal(true, kumo_vals[20][0]), cy: realVal(false, kumo_vals[20][1]), r: 12, class: "kumo_circles", yr: 20, fill: kumo_cls, stroke: c_20, sw: "3px", imageSrc: kumo_img}
