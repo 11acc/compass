@@ -67,7 +67,7 @@ let laya_vals = {
 let asap_vals = {
     20: [-3.21, 1.03]
     , 23: [1.73, -0.67]
-    // , 25: [-99, -99]
+    , 25: [1.0, -0.05]
 };
 let deep_vals = {
     20: [-1.66, -1.16]
@@ -300,7 +300,7 @@ let circleData = [
     ,[//ASAP
         { cx: realVal(true, asap_vals[20][0]), cy: realVal(false, asap_vals[20][1]), r: 12, class: "asap_circles", yr: 20, fill: asap_cls, stroke: c_20, sw: "3px", imageSrc: asap_img}
         ,{ cx: realVal(true, asap_vals[23][0]), cy: realVal(false, asap_vals[23][1]), r: 12, class: "asap_circles", yr: 23, fill: asap_cls, stroke: c_23, sw: "3px", imageSrc: asap_img}
-        // ,{ cx: realVal(true, asap_vals[25][0]), cy: realVal(false, asap_vals[25][1]), r: 12, class: "asap_circles", yr: 25, fill: asap_cls, stroke: c_25, sw: "3px", imageSrc: asap_img}
+        ,{ cx: realVal(true, asap_vals[25][0]), cy: realVal(false, asap_vals[25][1]), r: 12, class: "asap_circles", yr: 25, fill: asap_cls, stroke: c_25, sw: "3px", imageSrc: asap_img}
     ]
     ,[//DEEP
         { cx: realVal(true, deep_vals[20][0]), cy: realVal(false, deep_vals[20][1]), r: 12, class: "deep_circles", yr: 20, fill: deep_cls, stroke: c_20, sw: "3px", imageSrc: deep_img}
