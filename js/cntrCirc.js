@@ -1,8 +1,5 @@
 'use strict';
 
-// Import our data and utilities
-const { circleData, circleUtils } = window;
-
 // DOM Elements
 const t_al_c = $(".compass circle");
 const t_al_i = $(".compass image");

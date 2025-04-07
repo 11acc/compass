@@ -1,7 +1,7 @@
 'use strict';
 
 // Import our data and utilities
-const { circleData, circleUtils } = window;
+// const { circleData, circleUtils } = window;
 
 // Constants
 const x_long = 430/2;
@@ -19,6 +19,84 @@ const overallAverage = circleUtils.calculateOverallAverage();
 
 // Generate all circles
 const allCircles = circleUtils.generateAllCircles();
+
+// Utility functions
+function realVal(orientation, sqr) {
+    if (orientation) {
+        // cx, left right, horizontal
+        return sqr * 21 + 214;
+    } else {
+        // cy, auth lib, vertical
+        return (-1 * sqr) * 23 + 236;
+    }
+}
+
+function prctgStat(orientation, axy) {
+    let ahhh = 0;
+    if (orientation) {
+        // IF more than x_long RIGHT
+        if (axy > x_long) {
+            ahhh = ((axy-x_long)/x_long)*100;
+            comp_keyword_x.html((Math.round(ahhh) + "% Right"));
+        // IF less than x_long LEFT
+        } else if (axy < x_long) {
+            ahhh = ((x_long-axy)/x_long)*100;
+            comp_keyword_x.html((Math.round(ahhh) + "% Left"));
+        } else {
+            comp_keyword_y.html("Perfectly even, huh");
+        }
+    } else {
+        // IF more than y_long LIBERTARIAN
+        if (axy > y_long) {
+            ahhh = ((axy-y_long)/y_long)*100;
+            comp_keyword_y.html((Math.round(ahhh) + "% Liberal"));
+        // IF more than y_long AUTHORITARIAN
+        } else if (axy < y_long) {
+            ahhh = ((y_long-axy)/y_long)*100;
+            comp_keyword_y.html((Math.round(ahhh) + "% Conservative"));
+        } else {
+            comp_keyword_y.html("Perfectly even, huh");
+        }
+    }
+}
+
+function prctgChangePerson(host) {
+    if (host === "all") {
+        prctgStat(true, realVal(true, overallAverage.x));
+        prctgStat(false, realVal(false, overallAverage.y));
+    } else {
+        const avg = circleUtils.calculateAverage(host);
+        prctgStat(true, realVal(true, avg.x));
+        prctgStat(false, realVal(false, avg.y));
+    }
+}
+
+function prctgChangeTime(yr) {
+    if (yr === "all") {
+        prctgStat(true, realVal(true, overallAverage.x));
+        prctgStat(false, realVal(false, overallAverage.y));
+    } else {
+        let time_x = 0, time_y = 0;
+        let count = 0;
+        
+        // Calculate average for the specific year
+        Object.entries(circleData.people).forEach(([id, person]) => {
+            if (person.values[yr]) {
+                const [x, y] = person.values[yr];
+                time_x += x;
+                time_y += y;
+                count++;
+            }
+        });
+
+        if (count > 0) {
+            time_x /= count;
+            time_y /= count;
+            prctgStat(true, realVal(true, time_x));
+            prctgStat(false, realVal(false, time_y));
+        }
+    }
+}
 
 // Circle creation functions
 function createCirc(cx, cy, r, fill, stroke, sw, cls, yr) {
@@ -194,9 +272,22 @@ function animateCirc(circleData) {
     animateStep();
 }
 
+// Clamp functions
 function getPplIdx() {
     const personIds = Object.keys(circleData.people);
     return personIds.indexOf(data_clicks);
+}
+function clampReveal() {
+    clamp.css("bottom", "0");
+    setTimeout(function() {
+        clamp.css("bottom", "-11%");
+    }, 2000);
+}
+function clampRevealTheSecondComing() { // i am the same person after all xD
+    sponge.css("bottom", "0");
+    setTimeout(function() {
+        sponge.css("bottom", "-11%");
+    }, 2000);
 }
 
 // Animation trigger
