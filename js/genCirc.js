@@ -85,7 +85,7 @@ let simp_vals = {
 };
 let qiii_vals = {
     20: [-1.68, -3.03]
-    // , 25: [-99, -99]
+    , 25: [0.0, -2.51] // damn perfect center
 };
 let reoo_vals = {
     20: [-0.91, -4.21]
@@ -318,7 +318,7 @@ let circleData = [
     ]
     ,[//QIII
         { cx: realVal(true, qiii_vals[20][0]), cy: realVal(false, qiii_vals[20][1]), r: 12, class: "qiii_circles", yr: 20, fill: qiii_cls, stroke: c_20, sw: "3px", imageSrc: qiii_img}
-        // ,{ cx: realVal(true, qiii_vals[25][0]), cy: realVal(false, qiii_vals[25][1]), r: 12, class: "qiii_circles", yr: 25, fill: qiii_cls, stroke: c_25, sw: "3px", imageSrc: qiii_img}
+        ,{ cx: realVal(true, qiii_vals[25][0]), cy: realVal(false, qiii_vals[25][1]), r: 12, class: "qiii_circles", yr: 25, fill: qiii_cls, stroke: c_25, sw: "3px", imageSrc: qiii_img}
     ]
     ,[//REOO
         { cx: realVal(true, reoo_vals[20][0]), cy: realVal(false, reoo_vals[20][1]), r: 12, class: "reoo_circles", yr: 20, fill: reoo_cls, stroke: c_20, sw: "3px", imageSrc: reoo_img}
