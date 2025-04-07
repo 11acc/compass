@@ -54,6 +54,9 @@
     color: #ffbd6a;
 }
 
+.user_btn.tbtn_25::after {
+    background-color: var(--c_25);
+}
 .user_btn.tbtn_24::after {
     background-color: var(--c_24);
 }
@@ -70,6 +73,9 @@
     background-color: var(--c_18);
 }
 
+.user_btn.tbtn_25:hover {
+    color: var(--c_25);
+}
 .user_btn.tbtn_24:hover {
     color: var(--c_24);
 }
@@ -86,6 +92,9 @@
     color: var(--c_18);
 }
 
+.user_btn_active.tbtn_25 {
+    color: var(--c_25);
+}
 .user_btn_active.tbtn_24 {
     color: var(--c_24);
 }

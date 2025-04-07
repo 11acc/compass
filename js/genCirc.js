@@ -27,13 +27,14 @@ let c_21 = getComputedStyle(document.documentElement).getPropertyValue('--c_21')
 let c_22 = getComputedStyle(document.documentElement).getPropertyValue('--c_22');
 let c_23 = getComputedStyle(document.documentElement).getPropertyValue('--c_23');
 let c_24 = getComputedStyle(document.documentElement).getPropertyValue('--c_24');
+let c_25 = getComputedStyle(document.documentElement).getPropertyValue('--c_25');
 
 let s123_img = "https://files.catbox.moe/6wex5e.png";
 let laya_img = "https://files.catbox.moe/p1x3bk.png";
 // let asap_img = "https://files.catbox.moe/uj0hv4.png";
 let asap_img = "https://files.catbox.moe/j1zhaq.png";
-// let deep_img = "https://files.catbox.moe/kkeszb.png";
-let deep_img = "https://files.catbox.moe/m8hxc6.png";
+let deep_img = "https://files.catbox.moe/kkeszb.png";
+// let deep_img = "https://files.catbox.moe/m8hxc6.png";
 let kumo_img = "https://files.catbox.moe/b8a8dz.png";
 let simp_img = "https://files.catbox.moe/2gud1u.png";
 let qiii_img = "https://files.catbox.moe/lwm5dj.png";
@@ -56,28 +57,35 @@ let s123_vals = {
     , 22: [-3.85, -5.11]
     , 23: [0.55, -3.35]
     , 24: [-2.5, -1.28]
+    // , 25: [-99, -99]
 };
 let laya_vals = {
     20: [-2.08, -2.81]
     , 23: [-4.63, -3.18]
+    , 25: [-5.25, -3.85]
 };
 let asap_vals = {
     20: [-3.21, 1.03]
     , 23: [1.73, -0.67]
+    // , 25: [-99, -99]
 };
 let deep_vals = {
     20: [-1.66, -1.16]
     , 23: [-2.38, 0.56]
     , 24: [-2.00, 0.62]
+    , 25: [-1.13, 1.85]
 };
 let kumo_vals = {
     20: [2.22, 3.65]
+    // , 25: [-99, -99]
 };
 let simp_vals = {
     20: [4.12, 4.76]
+    // , 25: [-99, -99]
 };
 let qiii_vals = {
     20: [-1.68, -3.03]
+    // , 25: [-99, -99]
 };
 let reoo_vals = {
     20: [-0.91, -4.21]
@@ -85,6 +93,7 @@ let reoo_vals = {
     , 22: [-0.08, -6.11]
     , 23: [-1.52, -5.55]
     , 24: [-1.13, -5.49]
+    , 25: [-2.25, -4.41]
 };
 
 let s123_nr = Object.keys(s123_vals).length;
@@ -281,28 +290,35 @@ let circleData = [
         ,{ cx: realVal(true, s123_vals[22][0]), cy: realVal(false, s123_vals[22][1]), r: 12, class: "s123_circles", yr: 22, fill: s123_cls, stroke: c_22, sw: "3px", imageSrc: s123_img}
         ,{ cx: realVal(true, s123_vals[23][0]), cy: realVal(false, s123_vals[23][1]), r: 12, class: "s123_circles", yr: 23, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
         ,{ cx: realVal(true, s123_vals[24][0]), cy: realVal(false, s123_vals[24][1]), r: 12, class: "s123_circles", yr: 24, fill: s123_cls, stroke: c_23, sw: "3px", imageSrc: s123_img}
+        // ,{ cx: realVal(true, s123_vals[25][0]), cy: realVal(false, s123_vals[25][1]), r: 12, class: "s123_circles", yr: 25, fill: s123_cls, stroke: c_25, sw: "3px", imageSrc: s123_img}
     ]
     ,[//LAYA
         { cx: realVal(true, laya_vals[20][0]), cy: realVal(false, laya_vals[20][1]), r: 12, class: "laya_circles", yr: 20, fill: laya_cls, stroke: c_20, sw: "3px", imageSrc: laya_img}
         ,{ cx: realVal(true, laya_vals[23][0]), cy: realVal(false, laya_vals[23][1]), r: 12, class: "laya_circles", yr: 23, fill: laya_cls, stroke: c_23, sw: "3px", imageSrc: laya_img}
+        ,{ cx: realVal(true, laya_vals[25][0]), cy: realVal(false, laya_vals[25][1]), r: 12, class: "laya_circles", yr: 25, fill: laya_cls, stroke: c_25, sw: "3px", imageSrc: laya_img}
     ]
     ,[//ASAP
         { cx: realVal(true, asap_vals[20][0]), cy: realVal(false, asap_vals[20][1]), r: 12, class: "asap_circles", yr: 20, fill: asap_cls, stroke: c_20, sw: "3px", imageSrc: asap_img}
         ,{ cx: realVal(true, asap_vals[23][0]), cy: realVal(false, asap_vals[23][1]), r: 12, class: "asap_circles", yr: 23, fill: asap_cls, stroke: c_23, sw: "3px", imageSrc: asap_img}
+        // ,{ cx: realVal(true, asap_vals[25][0]), cy: realVal(false, asap_vals[25][1]), r: 12, class: "asap_circles", yr: 25, fill: asap_cls, stroke: c_25, sw: "3px", imageSrc: asap_img}
     ]
     ,[//DEEP
         { cx: realVal(true, deep_vals[20][0]), cy: realVal(false, deep_vals[20][1]), r: 12, class: "deep_circles", yr: 20, fill: deep_cls, stroke: c_20, sw: "3px", imageSrc: deep_img}
         ,{ cx: realVal(true, deep_vals[23][0]), cy: realVal(false, deep_vals[23][1]), r: 12, class: "deep_circles", yr: 23, fill: deep_cls, stroke: c_23, sw: "3px", imageSrc: deep_img}
         ,{ cx: realVal(true, deep_vals[24][0]), cy: realVal(false, deep_vals[24][1]), r: 12, class: "deep_circles", yr: 24, fill: deep_cls, stroke: c_24, sw: "3px", imageSrc: deep_img}
+        ,{ cx: realVal(true, deep_vals[25][0]), cy: realVal(false, deep_vals[25][1]), r: 12, class: "deep_circles", yr: 25, fill: deep_cls, stroke: c_25, sw: "3px", imageSrc: deep_img}
     ]
     ,[//KUMO
         { cx: realVal(true, kumo_vals[20][0]), cy: realVal(false, kumo_vals[20][1]), r: 12, class: "kumo_circles", yr: 20, fill: kumo_cls, stroke: c_20, sw: "3px", imageSrc: kumo_img}
+        // ,{ cx: realVal(true, kumo_vals[25][0]), cy: realVal(false, kumo_vals[25][1]), r: 12, class: "kumo_circles", yr: 25, fill: kumo_cls, stroke: c_25, sw: "3px", imageSrc: kumo_img}
     ]
     ,[//SIMP
         { cx: realVal(true, simp_vals[20][0]), cy: realVal(false, simp_vals[20][1]), r: 12, class: "simp_circles", yr: 20, fill: simp_cls, stroke: c_20, sw: "3px", imageSrc: simp_img}
+        // ,{ cx: realVal(true, simp_vals[25][0]), cy: realVal(false, simp_vals[25][1]), r: 12, class: "simp_circles", yr: 25, fill: simp_cls, stroke: c_25, sw: "3px", imageSrc: simp_img}
     ]
     ,[//QIII
         { cx: realVal(true, qiii_vals[20][0]), cy: realVal(false, qiii_vals[20][1]), r: 12, class: "qiii_circles", yr: 20, fill: qiii_cls, stroke: c_20, sw: "3px", imageSrc: qiii_img}
+        // ,{ cx: realVal(true, qiii_vals[25][0]), cy: realVal(false, qiii_vals[25][1]), r: 12, class: "qiii_circles", yr: 25, fill: qiii_cls, stroke: c_25, sw: "3px", imageSrc: qiii_img}
     ]
     ,[//REOO
         { cx: realVal(true, reoo_vals[20][0]), cy: realVal(false, reoo_vals[20][1]), r: 12, class: "reoo_circles", yr: 20, fill: reoo_cls, stroke: c_20, sw: "3px", imageSrc: reoo_img}
@@ -310,6 +326,7 @@ let circleData = [
         ,{ cx: realVal(true, reoo_vals[22][0]), cy: realVal(false, reoo_vals[22][1]), r: 12, class: "reoo_circles", yr: 22, fill: reoo_cls, stroke: c_22, sw: "3px", imageSrc: reoo_img}
         ,{ cx: realVal(true, reoo_vals[23][0]), cy: realVal(false, reoo_vals[23][1]), r: 12, class: "reoo_circles", yr: 23, fill: reoo_cls, stroke: c_23, sw: "3px", imageSrc: reoo_img}
         ,{ cx: realVal(true, reoo_vals[24][0]), cy: realVal(false, reoo_vals[24][1]), r: 12, class: "reoo_circles", yr: 24, fill: reoo_cls, stroke: c_24, sw: "3px", imageSrc: reoo_img}
+        ,{ cx: realVal(true, reoo_vals[25][0]), cy: realVal(false, reoo_vals[25][1]), r: 12, class: "reoo_circles", yr: 25, fill: reoo_cls, stroke: c_25, sw: "3px", imageSrc: reoo_img}
     ]
 ];
 

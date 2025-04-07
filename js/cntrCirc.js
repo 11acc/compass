@@ -7,12 +7,14 @@ let t_21 = $(".t_21");
 let t_22 = $(".t_22");
 let t_23 = $(".t_23");
 let t_24 = $(".t_24");
+let t_25 = $(".t_25");
 let tbtn_18 = $(".tbtn_18");
 let tbtn_20 = $(".tbtn_20");
 let tbtn_21 = $(".tbtn_21");
 let tbtn_22 = $(".tbtn_22");
 let tbtn_23 = $(".tbtn_23");
 let tbtn_24 = $(".tbtn_24");
+let tbtn_25 = $(".tbtn_25");
 let tbtn_al = $(".tbtn_al");
 
 let s123_btn = $('.s123_btn');
@@ -238,6 +240,8 @@ function putActive(type, host, tthis) { // why the fuck did i name it 'tthis'
                 tbtn_23.removeClass("user_btn_active");
             } else if (active_clicks == "24") {
                 tbtn_24.removeClass("user_btn_active");
+            } else if (active_clicks == "25") {
+                tbtn_25.removeClass("user_btn_active");
             } else if (active_clicks == "all") {
                 tbtn_al.removeClass("user_btn_active");
             }
@@ -335,6 +339,13 @@ tbtn_24.click(function() {
     changeBB("2024");
     console.log("hey hey 24 now: ", time_time)
 });
+tbtn_25.click(function() {
+    time_time = "25";
+    timeClick(25);
+    putActive("time", "25", $(this));
+    changeBB("2025");
+    console.log("wow 25", time_time)
+});
 tbtn_al.click(function() {
     time_time = "0";
     timeClick("all");
@@ -416,6 +427,11 @@ function changeTime(time) {
             t_24.addClass("hide_them");
         } else if (time == 24) {
             t_24.removeClass("hide_them");
+        }
+        if (time != 25) {
+            t_25.addClass("hide_them");
+        } else if (time == 25) {
+            t_25.removeClass("hide_them");
         }
     }
 }
