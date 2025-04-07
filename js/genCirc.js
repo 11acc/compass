@@ -1,8 +1,5 @@
 'use strict';
 
-// Import our data and utilities
-// const { circleData, circleUtils } = window;
-
 // Constants
 const x_long = 430/2;
 const y_long = 475/2;
