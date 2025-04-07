@@ -193,11 +193,11 @@ function prctgStat(orientation, axy) {
         // IF more than y_long LIBERTARIAN
         if (axy > y_long) {
             ahhh = ((axy-y_long)/y_long)*100
-            comp_keyword_y.html((Math.round(ahhh) + "%" + " Libertarian")) 
+            comp_keyword_y.html((Math.round(ahhh) + "%" + " Liberal"))
         // IF more than y_long AUTHORITARIAN
         } else if (axy < y_long) {
             ahhh = ((y_long-axy)/y_long)*100
-            comp_keyword_y.html((Math.round(ahhh) + "%" + " Authoritarian")) 
+            comp_keyword_y.html((Math.round(ahhh) + "%" + " Conservative"))
         } else {
             comp_keyword_y.html(("Perfectly even, huh"))
         }
