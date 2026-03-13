@@ -10,6 +10,7 @@ const t_22 = $(".t_22");
 const t_23 = $(".t_23");
 const t_24 = $(".t_24");
 const t_25 = $(".t_25");
+const t_26 = $(".t_26");
 const tbtn_18 = $(".tbtn_18");
 const tbtn_20 = $(".tbtn_20");
 const tbtn_21 = $(".tbtn_21");
@@ -17,6 +18,7 @@ const tbtn_22 = $(".tbtn_22");
 const tbtn_23 = $(".tbtn_23");
 const tbtn_24 = $(".tbtn_24");
 const tbtn_25 = $(".tbtn_25");
+const tbtn_26 = $(".tbtn_26");
 const tbtn_al = $(".tbtn_al");
 
 // Person buttons and circles
@@ -154,7 +156,7 @@ function putActive(type, host, tthis) {
             elements.btn.removeClass("user_btn_active");
         });
     } else if (type == "reset_t") {
-        $(".tbtn_18, .tbtn_20, .tbtn_21, .tbtn_22, .tbtn_23, .tbtn_24, .tbtn_al")
+        $(".tbtn_18, .tbtn_20, .tbtn_21, .tbtn_22, .tbtn_23, .tbtn_24, .tbtn_25, .tbtn_26, .tbtn_al")
             .removeClass("user_btn_active");
     }
 }
@@ -167,7 +169,8 @@ const timeElements = {
     22: { btn: tbtn_22, elements: t_22 },
     23: { btn: tbtn_23, elements: t_23 },
     24: { btn: tbtn_24, elements: t_24 },
-    25: { btn: tbtn_25, elements: t_25 }
+    25: { btn: tbtn_25, elements: t_25 },
+    26: { btn: tbtn_26, elements: t_26 }
 };
 
 Object.entries(timeElements).forEach(([year, elements]) => {

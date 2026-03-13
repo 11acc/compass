@@ -52,6 +52,7 @@ const circleData = {
             , image: "https://files.catbox.moe/b8a8dz.png"
             , values: {
                 20: [2.22, 3.65]
+                , 26: [-4.25, -5.28]
             }
         }
         , simp: {
@@ -82,12 +83,13 @@ const circleData = {
                 , 23: [-1.52, -5.55]
                 , 24: [-1.13, -5.49]
                 , 25: [-2.25, -4.41]
+                , 26: [-4.25, -7.38]
             }
         }
     },
 
     // Year configurations
-    years: [18, 20, 21, 22, 23, 24, 25],
+    years: [18, 20, 21, 22, 23, 24, 25, 26],
 
     // Color configurations for years
     yearColors: {
@@ -98,6 +100,7 @@ const circleData = {
         , 23: getComputedStyle(document.documentElement).getPropertyValue('--c_23')
         , 24: getComputedStyle(document.documentElement).getPropertyValue('--c_24')
         , 25: getComputedStyle(document.documentElement).getPropertyValue('--c_25')
+        , 26: getComputedStyle(document.documentElement).getPropertyValue('--c_26')
     },
 
     // Circle configuration
