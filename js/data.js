@@ -13,6 +13,7 @@ const circleData = {
                 , 23: [0.55, -3.35]
                 , 24: [-2.5, -1.28]
                 , 25: [-1.75,-2.36]
+                // , 26: [asd, qwe]
             }
         }
         , laya: {
@@ -23,6 +24,7 @@ const circleData = {
                 20: [-2.08, -2.81]
                 , 23: [-4.63, -3.18]
                 , 25: [-5.25, -3.85]
+                // , 26: [asd, qwe]
             }
         }
         , asap: {
@@ -33,6 +35,7 @@ const circleData = {
                 20: [-3.21, 1.03]
                 , 23: [1.73, -0.67]
                 , 25: [1.00, -0.05]
+                // , 26: [asd, qwe]
             }
         }
         , deep: {
@@ -44,6 +47,7 @@ const circleData = {
                 , 23: [-2.38, 0.56]
                 , 24: [-2.00, 0.62]
                 , 25: [-1.13, 1.85]
+                , 26: [-2.0, 1.28]
             }
         }
         , kumo: {
@@ -61,6 +65,7 @@ const circleData = {
             , image: "https://files.catbox.moe/2gud1u.png"
             , values: {
                 20: [4.12, 4.76]
+                // , 26: [asd, qwe]
             }
         }
         , qiii: {
@@ -70,6 +75,7 @@ const circleData = {
             , values: {
                 20: [-1.68, -3.03]
                 , 25: [0.0, -2.51]
+                // , 26: [asd, qwe]
             }
         }
         , reoo: {
@@ -117,18 +123,18 @@ const circleData = {
 };
 
 // Utility functions
-const circleUtils = {   
+const circleUtils = {
     // Calculate average coordinates for a person
     calculateAverage: (personId) => {
         const person = circleData.people[personId];
         let sumX = 0, sumY = 0;
         const count = Object.keys(person.values).length;
-        
+
         Object.values(person.values).forEach(([x, y]) => {
             sumX += x;
             sumY += y;
         });
-        
+
         return {
             x: sumX / count
             , y: sumY / count
@@ -139,13 +145,13 @@ const circleUtils = {
     calculateOverallAverage: () => {
         let sumX = 0, sumY = 0;
         const people = Object.keys(circleData.people);
-        
+
         people.forEach(personId => {
             const avg = circleUtils.calculateAverage(personId);
             sumX += avg.x;
             sumY += avg.y;
         });
-        
+
         return {
             x: sumX / people.length
             , y: sumY / people.length
@@ -170,7 +176,7 @@ const circleUtils = {
 
     // Generate all circle data
     generateAllCircles: () => {
-        return Object.keys(circleData.people).map(personId => 
+        return Object.keys(circleData.people).map(personId =>
             circleUtils.generatePersonCircles(personId)
         );
     }
@@ -185,9 +191,9 @@ function scrambleGlitch(event) {
     let loop = 0;
     let loop2 = 0;
     let got = [];
-    
+
     clearInterval(interval);
-    
+
     interval = setInterval(() => {
         event.target.innerText = event.target.innerText
         .split("")
@@ -207,11 +213,11 @@ function scrambleGlitch(event) {
             return letters[Math.floor(Math.random() * 26)];
         })
         .join("");
-        
+
         if (iteration >= event.target.dataset.value.length) {
             clearInterval(interval);
         }
-        
+
         iteration += 1 / 3;
     }, 110);
 }
@@ -226,17 +232,17 @@ function handleClickOnBigNum(event) {
 function callScrambleGlitch(valueX) {
     // Get the #big_num element
     const bigNumElement = document.querySelector("#big_num");
-    
+
     // Create a new click event
     const clickEvent = new MouseEvent('click', {
         view: window
         , bubbles: true
         , cancelable: true
     });
-    
+
     // Set the custom attribute "data-value" on #big_num element
     bigNumElement.dataset.value = valueX;
-    
+
     // Dispatch the click event on #big_num element
     bigNumElement.dispatchEvent(clickEvent);
 }
@@ -247,4 +253,4 @@ document.querySelector("#big_num").onclick = handleClickOnBigNum;
 // Export the data and utilities
 window.circleData = circleData;
 window.circleUtils = circleUtils;
-window.callScrambleGlitch = callScrambleGlitch; 
+window.callScrambleGlitch = callScrambleGlitch;
